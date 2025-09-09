@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TTS Models</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigacija -->
+<nav class="navbar">
+    <a href="index.html" class="active">TTS</a>
+    <a href="voice_cloning.html">Voice Cloning</a>
+</nav>
+
+<!-- Naslov -->
+<h1>Text-to-Speech Model Comparison</h1>
+
+<form id="tts-form">
+<label for="age" style="margin-left: 20px;"> Age:</label>
+<input type="number" id="age" name="age" required min="1" max="120">
+
+
+<!-- Table with audio samples -->
+<table>
+    <thead>
+        <tr>
+            <th>Sentence</th>
+            <th class="model-column">Suno AI Bark</th>
+            <th class="model-column">Tacotron2</th>
+            <th class="model-column">Tacotron2-DDC</th> 
+            <th class="model-column">Glow-TTS</th> 
+            <th class="model-column">Chatterbox-TTS</th> 
+            <th class="model-column">FastPitch</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Repeat this for each sentence -->
+        <tr>
+            <td>"I am so happy!"</td>
+            <td><audio controls><source src="audio_sample/suno_ai_bark/sentence1.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2/sentence1.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2_ddc/sentence1.wav" type="audio/wav"></audio></td> <!-- New audio for Tacotron2-DDC -->
+            <td><audio controls><source src="audio_sample/glowtts/sentence1.wav" type="audio/wav"></audio></td> <!-- New audio for Glow-TTS -->
+            <td><audio controls><source src="audio_sample\chatterbox\output_chatterbox_tts_01.wav" type="audio/wav"></audio></td> <!-- VITS -->
+            <td><audio controls><source src="audio_sample\fastpitch\output_fastpitch_tts_1.wav" type="audio/wav"></audio></td> <!-- FASTPITCH -->
+           </tr>
+        <tr>
+            <td>"Artificial intelligence is transforming many industries."</td>
+            <td><audio controls><source src="audio_sample/suno_ai_bark/sentence2.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2/sentence2.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2_ddc/sentence2.wav" type="audio/wav"></audio></td> 
+            <td><audio controls><source src="audio_sample/glowtts/sentence2.wav" type="audio/wav"></audio></td> 
+            <td><audio controls><source src="audio_sample\chatterbox\output_chatterbox_tts_02.wav" type="audio/wav"></audio></td> 
+            <td><audio controls><source src="audio_sample\fastpitch\output_fastpitch_tts_2.wav" type="audio/wav"></audio></td> <!-- FASTPITCH -->
+           </tr>
+        <tr>
+            <td>"What are the main benefits of using TTS technology?"</td>
+            <td><audio controls><source src="audio_sample/suno_ai_bark/sentence3.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-bark" value="1" required>1</label>
+                    <label><input type="radio" name="rating-bark" value="2">2</label>
+                    <label><input type="radio" name="rating-bark" value="3">3</label>
+                    <label><input type="radio" name="rating-bark" value="4">4</label>
+                    <label><input type="radio" name="rating-bark" value="5">5</label>
+                </div>
+            </td>
+            <td><audio controls><source src="audio_sample/tacotron2/sentence3.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-tacotron2" value="1" required>1</label>
+                    <label><input type="radio" name="rating-tacotron2" value="2">2</label>
+                    <label><input type="radio" name="rating-tacotron2" value="3">3</label>
+                    <label><input type="radio" name="rating-tacotron2" value="4">4</label>
+                    <label><input type="radio" name="rating-tacotron2" value="5">5</label>
+                </div>
+            </td>
+
+            <td><audio controls><source src="audio_sample/tacotron2_ddc/sentence3.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-tacotron2_ddc" value="1" required>1</label>
+                    <label><input type="radio" name="rating-tacotron2_ddc" value="2">2</label>
+                    <label><input type="radio" name="rating-tacotron2_ddc" value="3">3</label>
+                    <label><input type="radio" name="rating-tacotron2_ddc" value="4">4</label>
+                    <label><input type="radio" name="rating-tacotron2_ddc" value="5">5</label>
+                </div>
+            </td> 
+
+            <td><audio controls><source src="audio_sample/glowtts/sentence3.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-glowtts" value="1" required>1</label>
+                    <label><input type="radio" name="rating-glowtts" value="2">2</label>
+                    <label><input type="radio" name="rating-glowtts" value="3">3</label>
+                    <label><input type="radio" name="rating-glowtts" value="4">4</label>
+                    <label><input type="radio" name="rating-glowtts" value="5">5</label>
+                </div>
+            </td> 
+
+            <td><audio controls><source src="audio_sample\chatterbox\output_chatterbox_tts_03.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-vits" value="1" required>1</label>
+                    <label><input type="radio" name="rating-vits" value="2">2</label>
+                    <label><input type="radio" name="rating-vits" value="3">3</label>
+                    <label><input type="radio" name="rating-vits" value="4">4</label>
+                    <label><input type="radio" name="rating-vits" value="5">5</label>
+                </div>
+            </td> 
+
+            <td><audio controls><source src="audio_sample\fastpitch\output_fastpitch_tts_3.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-fastpitch" value="1" required>1</label>
+                    <label><input type="radio" name="rating-fastpitch" value="2">2</label>
+                    <label><input type="radio" name="rating-fastpitch" value="3">3</label>
+                    <label><input type="radio" name="rating-fastpitch" value="4">4</label>
+                    <label><input type="radio" name="rating-fastpitch" value="5">5</label>
+                </div>
+            </td> 
+            </tr>
+        <tr>
+            <td>"The meeting will take place at 10 AM in the conference room."</td>
+            <td><audio controls><source src="audio_sample/suno_ai_bark/sentence4.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2/sentence4.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2_ddc/sentence4.wav" type="audio/wav"></audio></td> <!-- New audio for Tacotron2-DDC -->
+            <td><audio controls><source src="audio_sample/glowtts/sentence4.wav" type="audio/wav"></audio></td> <!-- New audio for Glow-TTS -->
+            <td><audio controls><source src="audio_sample\chatterbox\output_chatterbox_tts_04.wav" type="audio/wav"></audio></td> 
+            <td><audio controls><source src="audio_sample\fastpitch\output_fastpitch_tts_4.wav" type="audio/wav"></audio></td> <!-- FASTPITCH -->
+             </tr>
+        <tr>
+            <td>"What a wonderful day it is!"</td>
+            <td><audio controls><source src="audio_sample/suno_ai_bark/sentence5.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2/sentence5.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2_ddc/sentence5.wav" type="audio/wav"></audio></td> <!-- New audio for Tacotron2-DDC -->
+            <td><audio controls><source src="audio_sample/glowtts/sentence5.wav" type="audio/wav"></audio></td> <!-- New audio for Glow-TTS -->
+            <td><audio controls><source src="audio_sample\chatterbox\output_chatterbox_tts_05.wav" type="audio/wav"></audio></td> 
+            <td><audio controls><source src="audio_sample\fastpitch\output_fastpitch_tts_5.wav" type="audio/wav"></audio></td> <!-- FASTPITCH -->
+             </tr>
+        <tr>
+            <td>"The acronym NATO stands for the North Atlantic Treaty Organization."</td>
+            <td><audio controls><source src="audio_sample/suno_ai_bark/sentence6.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-bark-1" value="1" required>1</label>
+                    <label><input type="radio" name="rating-bark-1" value="2">2</label>
+                    <label><input type="radio" name="rating-bark-1" value="3">3</label>
+                    <label><input type="radio" name="rating-bark-1" value="4">4</label>
+                    <label><input type="radio" name="rating-bark-1" value="5">5</label>
+                </div>
+            </td>
+            <td><audio controls><source src="audio_sample/tacotron2/sentence6.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-tacotron2-1" value="1" required>1</label>
+                    <label><input type="radio" name="rating-tacotron2-1" value="2">2</label>
+                    <label><input type="radio" name="rating-tacotron2-1" value="3">3</label>
+                    <label><input type="radio" name="rating-tacotron2-1" value="4">4</label>
+                    <label><input type="radio" name="rating-tacotron2-1" value="5">5</label>
+                </div>
+            </td>
+            <td><audio controls><source src="audio_sample/tacotron2_ddc/sentence6.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-tacotron2_ddc-1" value="1" required>1</label>
+                    <label><input type="radio" name="rating-tacotron2_ddc-1" value="2">2</label>
+                    <label><input type="radio" name="rating-tacotron2_ddc-1" value="3">3</label>
+                    <label><input type="radio" name="rating-tacotron2_ddc-1" value="4">4</label>
+                    <label><input type="radio" name="rating-tacotron2_ddc-1" value="5">5</label>
+                </div>
+            </td> 
+            <td><audio controls><source src="audio_sample/glowtts/sentence6.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-glowtts-1" value="1" required>1</label>
+                    <label><input type="radio" name="rating-glowtts-1" value="2">2</label>
+                    <label><input type="radio" name="rating-glowtts-1" value="3">3</label>
+                    <label><input type="radio" name="rating-glowtts-1" value="4">4</label>
+                    <label><input type="radio" name="rating-glowtts-1" value="5">5</label>
+                </div>
+            </td> 
+            <td><audio controls><source src="audio_sample\chatterbox\output_chatterbox_tts_06.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-vits-1" value="1" required>1</label>
+                    <label><input type="radio" name="rating-vits-1" value="2">2</label>
+                    <label><input type="radio" name="rating-vits-1" value="3">3</label>
+                    <label><input type="radio" name="rating-vits-1" value="4">4</label>
+                    <label><input type="radio" name="rating-vits-1" value="5">5</label>
+                </div>
+            </td> 
+            <td><audio controls><source src="audio_sample\fastpitch\output_fastpitch_tts_6.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-fastpitch-1" value="1" required>1</label>
+                    <label><input type="radio" name="rating-fastpitch-1" value="2">2</label>
+                    <label><input type="radio" name="rating-fastpitch-1" value="3">3</label>
+                    <label><input type="radio" name="rating-fastpitch-1" value="4">4</label>
+                    <label><input type="radio" name="rating-fastpitch-1" value="5">5</label>
+                </div>
+            </td> 
+         </tr>
+        <tr>
+            <td>"Can you explain the concept of machine learning?"</td>
+            <td><audio controls><source src="audio_sample/suno_ai_bark/sentence7.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2/sentence7.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2_ddc/sentence7.wav" type="audio/wav"></audio></td> <!-- New audio for Tacotron2-DDC -->
+            <td><audio controls><source src="audio_sample/glowtts/sentence7.wav" type="audio/wav"></audio></td> <!-- New audio for Glow-TTS -->
+            <td><audio controls><source src="audio_sample\chatterbox\output_chatterbox_tts_07.wav" type="audio/wav"></audio></td> 
+            <td><audio controls><source src="audio_sample\fastpitch\output_fastpitch_tts_7.wav" type="audio/wav"></audio></td> <!-- FASTPITCH -->
+            </tr>
+        <tr>
+            <td>"It is essential to understand the underlying algorithms."</td>
+            <td><audio controls><source src="audio_sample/suno_ai_bark/sentence8.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2/sentence8.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2_ddc/sentence8.wav" type="audio/wav"></audio></td> <!-- New audio for Tacotron2-DDC -->
+            <td><audio controls><source src="audio_sample/glowtts/sentence8.wav" type="audio/wav"></audio></td> <!-- New audio for Glow-TTS -->
+            <td><audio controls><source src="audio_sample\chatterbox\output_chatterbox_tts_08.wav" type="audio/wav"></audio></td> 
+            <td><audio controls><source src="audio_sample\fastpitch\output_fastpitch_tts_8.wav" type="audio/wav"></audio></td> <!-- FASTPITCH -->
+             </tr>
+        <tr>
+            <td>"Wow, this model generates incredibly realistic speech!"</td>
+            <td><audio controls><source src="audio_sample/suno_ai_bark/sentence9.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2/sentence9.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2_ddc/sentence9.wav" type="audio/wav"></audio></td> <!-- New audio for Tacotron2-DDC -->
+            <td><audio controls><source src="audio_sample/glowtts/sentence9.wav" type="audio/wav"></audio></td> <!-- New audio for Glow-TTS -->
+            <td><audio controls><source src="audio_sample\chatterbox\output_chatterbox_tts_09.wav" type="audio/wav"></audio></td> 
+            <td><audio controls><source src="audio_sample\fastpitch\output_fastpitch_tts_9.wav" type="audio/wav"></audio></td> <!-- FASTPITCH -->
+        </tr>
+        <tr>
+            <td>"How does the model handle different accents and dialects?"</td>
+            <td><audio controls><source src="audio_sample/suno_ai_bark/sentence10.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2/sentence10.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2_ddc/sentence10.wav" type="audio/wav"></audio></td> <!-- New audio for Tacotron2-DDC -->
+            <td><audio controls><source src="audio_sample/glowtts/sentence10.wav" type="audio/wav"></audio></td> <!-- New audio for Glow-TTS -->
+            <td><audio controls><source src="audio_sample\chatterbox\output_chatterbox_tts_10.wav" type="audio/wav"></audio></td> 
+            <td><audio controls><source src="audio_sample\fastpitch\output_fastpitch_tts_10.wav" type="audio/wav"></audio></td> <!-- FASTPITCH -->
+            </tr>
+        <tr>
+            <td>"In a world where technological advancements continue to reshape the way we interact with information, the ability of artificial intelligence to synthesize human-like speech with natural intonation, seamless pronunciation, and accurate stress patterns has become an essential component of modern communication systems, enabling applications ranging from virtual assistants and audiobook narration to accessibility solutions for individuals with visual impairments or speech disabilities."</td>
+            <td><audio controls><source src="audio_sample/suno_ai_bark/sentence11.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-bark-2" value="1" required>1</label>
+                    <label><input type="radio" name="rating-bark-2" value="2">2</label>
+                    <label><input type="radio" name="rating-bark-2" value="3">3</label>
+                    <label><input type="radio" name="rating-bark-2" value="4">4</label>
+                    <label><input type="radio" name="rating-bark-2" value="5">5</label>
+                </div>
+            </td>
+            <td><audio controls><source src="audio_sample/tacotron2/sentence11.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-tacotron2-2" value="1" required>1</label>
+                    <label><input type="radio" name="rating-tacotron2-2" value="2">2</label>
+                    <label><input type="radio" name="rating-tacotron2-2" value="3">3</label>
+                    <label><input type="radio" name="rating-tacotron2-2" value="4">4</label>
+                    <label><input type="radio" name="rating-tacotron2-2" value="5">5</label>
+                </div>
+            </td>
+            <td><audio controls><source src="audio_sample/tacotron2_ddc/sentence11.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-tacotron2_ddc-2" value="1" required>1</label>
+                    <label><input type="radio" name="rating-tacotron2_ddc-2" value="2">2</label>
+                    <label><input type="radio" name="rating-tacotron2_ddc-2" value="3">3</label>
+                    <label><input type="radio" name="rating-tacotron2_ddc-2" value="4">4</label>
+                    <label><input type="radio" name="rating-tacotron2_ddc-2" value="5">5</label>
+                </div>
+            </td> <!-- New audio for Tacotron2-DDC -->
+            <td><audio controls><source src="audio_sample/glowtts/sentence11.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-glowtts-2" value="1" required>1</label>
+                    <label><input type="radio" name="rating-glowtts-2" value="2">2</label>
+                    <label><input type="radio" name="rating-glowtts-2" value="3">3</label>
+                    <label><input type="radio" name="rating-glowtts-2" value="4">4</label>
+                    <label><input type="radio" name="rating-glowtts-2" value="5">5</label>
+                </div>
+            </td> <!-- New audio for Glow-TTS -->
+            <td><audio controls><source src="audio_sample\chatterbox\output_chatterbox_tts_11.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-vits-2" value="1" required>1</label>
+                    <label><input type="radio" name="rating-vits-2" value="2">2</label>
+                    <label><input type="radio" name="rating-vits-2" value="3">3</label>
+                    <label><input type="radio" name="rating-vits-2" value="4">4</label>
+                    <label><input type="radio" name="rating-vits-2" value="5">5</label>
+                </div>
+            </td> 
+            <td><audio controls><source src="audio_sample\fastpitch\output_fastpitch_tts_11.wav" type="audio/wav"></audio>
+                <div>
+                    <label><input type="radio" name="rating-fastpitch-2" value="1" required>1</label>
+                    <label><input type="radio" name="rating-fastpitch-2" value="2">2</label>
+                    <label><input type="radio" name="rating-fastpitch-2" value="3">3</label>
+                    <label><input type="radio" name="rating-fastpitch-2" value="4">4</label>
+                    <label><input type="radio" name="rating-fastpitch-2" value="5">5</label>
+                </div>
+            </td> <!-- FASTPITCH -->
+            </tr>
+        <tr>
+            <td>"As researchers delve deeper into the intricate mechanisms of deep learning-based text-to-speech synthesis, they face numerous challenges, including the need to handle variations in pitch, rhythm, and prosody while ensuring that the generated speech remains both intelligible and expressive, particularly when dealing with diverse linguistic structures, complex phonetic patterns, and the subtle nuances that make human speech so remarkably rich and dynamic."</td>
+            <td><audio controls><source src="audio_sample/suno_ai_bark/sentence12.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2/sentence12.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="audio_sample/tacotron2_ddc/sentence12.wav" type="audio/wav"></td> 
+            <td><audio controls><source src="audio_sample/glowtts/sentence12.wav" type="audio/wav"></audio></td> <!-- New audio for Glow-TTS -->
+            <td><audio controls><source src="audio_sample\chatterbox\output_chatterbox_tts_12.wav" type="audio/wav"></audio></td> 
+            <td><audio controls><source src="audio_sample\fastpitch\output_fastpitch_tts_12.wav" type="audio/wav"></audio></td> <!-- FASTPITCH -->
+           </tr>
+    </tbody>
+</table>
+
+<br>
+<button type="submit" style="margin-bottom: 20px;">Pošalji</button>
+
+<div id="custom-alert">Hvala na utrošenom vremenu. Vaši odgovori su zabilježeni!</div>
+
+</form>
+
+<script>
+    document.getElementById("tts-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    
+    const age = document.getElementById("age").value;
+
+    // Prikupljanje ocjena za svaku rečenicu i model
+    const data = {
+        age: age,
+        responses: [
+    {
+        sentence: "What are the main benefits of using TTS technology?",
+        ratings: {
+            "Suno AI Bark": document.querySelector('input[name="rating-bark"]:checked')?.value,
+            "Tacotron2": document.querySelector('input[name="rating-tacotron2"]:checked')?.value,
+            "Tacotron2-DDC": document.querySelector('input[name="rating-tacotron2_ddc"]:checked')?.value,
+            "Glow-TTS": document.querySelector('input[name="rating-glowtts"]:checked')?.value,
+            "VITS": document.querySelector('input[name="rating-vits"]:checked')?.value,
+            "FastPitch": document.querySelector('input[name="rating-fastpitch"]:checked')?.value
+        }
+    },
+    {
+        sentence: "The acronym NATO stands for the North Atlantic Treaty Organization.",
+        ratings: {
+            "Suno AI Bark": document.querySelector('input[name="rating-bark-1"]:checked')?.value,
+            "Tacotron2": document.querySelector('input[name="rating-tacotron2-1"]:checked')?.value,
+            "Tacotron2-DDC": document.querySelector('input[name="rating-tacotron2_ddc-1"]:checked')?.value,
+            "Glow-TTS": document.querySelector('input[name="rating-glowtts-1"]:checked')?.value,
+            "VITS": document.querySelector('input[name="rating-vits-1"]:checked')?.value,
+            "FastPitch": document.querySelector('input[name="rating-fastpitch-1"]:checked')?.value
+        }
+    },
+    {
+        sentence: "In a world where technological advancements continue to reshape the way we interact with information, the ability of artificial intelligence to synthesize human-like speech with natural intonation, seamless pronunciation, and accurate stress patterns has become an essential component of modern communication systems, enabling applications ranging from virtual assistants and audiobook narration to accessibility solutions for individuals with visual impairments or speech disabilities.",
+        ratings: {
+            "Suno AI Bark": document.querySelector('input[name="rating-bark-2"]:checked')?.value,
+            "Tacotron2": document.querySelector('input[name="rating-tacotron2-2"]:checked')?.value,
+            "Tacotron2-DDC": document.querySelector('input[name="rating-tacotron2_ddc-2"]:checked')?.value,
+            "Glow-TTS": document.querySelector('input[name="rating-glowtts-2"]:checked')?.value,
+            "VITS": document.querySelector('input[name="rating-vits-2"]:checked')?.value,
+            "FastPitch": document.querySelector('input[name="rating-fastpitch-2"]:checked')?.value
+        }
+    }
+]
+    };
+    // Ispis podataka za provjeru
+    console.log(data);
+
+    // Slanje podataka na Google Apps Script
+    fetch("https://script.google.com/macros/s/AKfycbyzKqqW4-1hQJT2Nyne9OzNR7F0fP2fjQMOAg4j-d26KSkG6GbK3KFiGXhr6GHOEosH/exec", {
+        method: "POST",
+        mode: "no-cors",  // Promijenjeno na 'cors'
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)  // Poslati podatke u JSON formatu
+    })
+    .then(response => response.text())
+    .then(result => console.log("Uspješno poslan odgovor:", result))
+    .catch(error => console.error("Greška:", error));
+
+    const alertBox = document.getElementById("custom-alert");
+    alertBox.style.display = "block";
+    setTimeout(() => alertBox.style.display = "none", 4000);
+
+    // Resetiranje forme
+    document.getElementById("tts-form").reset();
+});
+
+    </script>
+
+</body>
+</html>
