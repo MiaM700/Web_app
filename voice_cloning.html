@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voice Cloning Models</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigacija -->
+<nav class="navbar">
+    <a href="index.html">TTS</a>
+    <a href="voice_cloning.html" class="active">Voice Cloning</a>
+</nav>
+
+<!-- Naslov -->
+<h1>Voice Cloning Model Comparison</h1>
+
+<!-- Table with audio samples for Voice Cloning -->
+<form id="voice-cloning-form">
+    <label for="age" style="margin-left: 20px;"> Age:</label>
+    <input type="number" id="age" name="age" required min="1" max="120">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Original voice</th>
+                <th>YourTTS</th>
+                <th>XTTS</th>
+                <th>Chatterbox</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><audio controls><source src="audio_sample\originals-vc\Biden-[AudioTrimmer.com].wav" type="audio/wav"></audio> <p>Original voice: Biden</p> </td>
+                <td>
+                    <audio controls><source src="audio_sample\yourtts\Biden_yourtts.wav" type="audio/wav"></audio>
+                    <div>
+                        <label><input type="radio" name="Biden-yourtts" value="1" required>1</label>
+                        <label><input type="radio" name="Biden-yourtts" value="2">2</label>
+                        <label><input type="radio" name="Biden-yourtts" value="3">3</label>
+                        <label><input type="radio" name="Biden-yourtts" value="4">4</label>
+                        <label><input type="radio" name="Biden-yourtts" value="5">5</label>
+                    </div>
+                </td>
+                <td>
+                    <audio controls><source src="audio_sample/vocloner_xtts/Biden_Vocloner.wav" type="audio/wav"></audio>
+                    <div>
+                        <label><input type="radio" name="Biden-xtts" value="1" required>1</label>
+                        <label><input type="radio" name="Biden-xtts" value="2">2</label>
+                        <label><input type="radio" name="Biden-xtts" value="3">3</label>
+                        <label><input type="radio" name="Biden-xtts" value="4">4</label>
+                        <label><input type="radio" name="Biden-xtts" value="5">5</label>
+                    </div>
+                </td>
+                <td>
+                    <audio controls><source src="audio_sample\chatterbox-vc\Biden_rez.wav" type="audio/wav"></audio>
+                    <div>
+                        <label><input type="radio" name="Biden-chatter" value="1" required>1</label>
+                        <label><input type="radio" name="Biden-chatter" value="2">2</label>
+                        <label><input type="radio" name="Biden-chatter" value="3">3</label>
+                        <label><input type="radio" name="Biden-chatter" value="4">4</label>
+                        <label><input type="radio" name="Biden-chatter" value="5">5</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><audio controls><source src="audio_sample\originals-vc\Karlo.wav" type="audio/wav"></audio> <p>Original voice: Karlo</p></td>
+                <td>
+                    <audio controls><source src="audio_sample\yourtts\Karlo_yourtts.wav" type="audio/wav"></audio>
+                    <div>
+                        <label><input type="radio" name="Karlo-yourtts" value="1" required>1</label>
+                        <label><input type="radio" name="Karlo-yourtts" value="2">2</label>
+                        <label><input type="radio" name="Karlo-yourtts" value="3">3</label>
+                        <label><input type="radio" name="Karlo-yourtts" value="4">4</label>
+                        <label><input type="radio" name="Karlo-yourtts" value="5">5</label>
+                    </div>
+                </td>
+                <td>
+                    <audio controls><source src="audio_sample\vocloner_xtts\Karlo_Vocloner.wav" type="audio/wav"></audio>
+                    <div>
+                        <label><input type="radio" name="Karlo-xtts" value="1" required>1</label>
+                        <label><input type="radio" name="Karlo-xtts" value="2">2</label>
+                        <label><input type="radio" name="Karlo-xtts" value="3">3</label>
+                        <label><input type="radio" name="Karlo-xtts" value="4">4</label>
+                        <label><input type="radio" name="Karlo-xtts" value="5">5</label>
+                    </div>
+                </td>
+                <td>
+                    <audio controls><source src="audio_sample\chatterbox-vc\Karlo_rez.wav" type="audio/wav"></audio>
+                    <div>
+                        <label><input type="radio" name="Karlo-chatter" value="1" required>1</label>
+                        <label><input type="radio" name="Karlo-chatter" value="2">2</label>
+                        <label><input type="radio" name="Karlo-chatter" value="3">3</label>
+                        <label><input type="radio" name="Karlo-chatter" value="4">4</label>
+                        <label><input type="radio" name="Karlo-chatter" value="5">5</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><audio controls><source src="audio_sample/originals-vc/zenski_glas.wav" type="audio/wav"></audio> <p>Original voice: Anna</p></td>
+                <td>
+                    <audio controls><source src="audio_sample\yourtts\Anna_yourtts.wav" type="audio/wav"></audio>
+                    <div>
+                        <label><input type="radio" name="Anna-yourtts" value="1" required>1</label>
+                        <label><input type="radio" name="Anna-yourtts" value="2">2</label>
+                        <label><input type="radio" name="Anna-yourtts" value="3">3</label>
+                        <label><input type="radio" name="Anna-yourtts" value="4">4</label>
+                        <label><input type="radio" name="Anna-yourtts" value="5">5</label>
+                    </div>
+                </td>
+                <td>
+                    <audio controls><source src="audio_sample\vocloner_xtts\Anna_Vocloner.wav" type="audio/wav"></audio>
+                    <div>
+                        <label><input type="radio" name="Anna-xtts" value="1" required>1</label>
+                        <label><input type="radio" name="Anna-xtts" value="2">2</label>
+                        <label><input type="radio" name="Anna-xtts" value="3">3</label>
+                        <label><input type="radio" name="Anna-xtts" value="4">4</label>
+                        <label><input type="radio" name="Anna-xtts" value="5">5</label>
+                    </div>
+                </td>
+                <td>
+                    <audio controls><source src="audio_sample\chatterbox-vc\zenska_rez.wav" type="audio/wav"></audio>
+                    <div>
+                        <label><input type="radio" name="Anna-chatter" value="1" required>1</label>
+                        <label><input type="radio" name="Anna-chatter" value="2">2</label>
+                        <label><input type="radio" name="Anna-chatter" value="3">3</label>
+                        <label><input type="radio" name="Anna-chatter" value="4">4</label>
+                        <label><input type="radio" name="Anna-chatter" value="5">5</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><audio controls><source src="audio_sample\originals-vc\CardiB.wav" type="audio/wav"></audio> <p>Original voice: Cardi B</p></td>
+                <td>
+                    <audio controls><source src="audio_sample\yourtts\CardiB_yourtts.wav" type="audio/wav"></audio>
+                    <div>
+                        <label><input type="radio" name="CardiB-yourtts" value="1" required>1</label>
+                        <label><input type="radio" name="CardiB-yourtts" value="2">2</label>
+                        <label><input type="radio" name="CardiB-yourtts" value="3">3</label>
+                        <label><input type="radio" name="CardiB-yourtts" value="4">4</label>
+                        <label><input type="radio" name="CardiB-yourtts" value="5">5</label>
+                    </div>
+                </td>
+                <td>
+                    <audio controls><source src="audio_sample\vocloner_xtts\CardiB_Vocloner.wav" type="audio/wav"></audio>
+                    <div>
+                        <label><input type="radio" name="CardiB-xtts" value="1" required>1</label>
+                        <label><input type="radio" name="CardiB-xtts" value="2">2</label>
+                        <label><input type="radio" name="CardiB-xtts" value="3">3</label>
+                        <label><input type="radio" name="CardiB-xtts" value="4">4</label>
+                        <label><input type="radio" name="CardiB-xtts" value="5">5</label>
+                    </div>
+                </td>
+                <td>
+                    <audio controls><source src="audio_sample\chatterbox-vc\cardiB_rez.wav" type="audio/wav"></audio>
+                    <div>
+                        <label><input type="radio" name="CardiB-chatter" value="1" required>1</label>
+                        <label><input type="radio" name="CardiB-chatter" value="2">2</label>
+                        <label><input type="radio" name="CardiB-chatter" value="3">3</label>
+                        <label><input type="radio" name="CardiB-chatter" value="4">4</label>
+                        <label><input type="radio" name="CardiB-chatter" value="5">5</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <button type="submit">Pošalji</button>
+
+    <div id="custom-alert">Hvala na utrošenom vremenu. Vaši odgovori su zabilježeni!</div>
+
+</form>
+
+<script>
+document.getElementById("voice-cloning-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const age = document.getElementById("age").value;
+
+    const data = {
+        age: age,
+        responses: [
+    {
+        sentence: "Biden",
+        ratings: {
+            "YourTTS": document.querySelector('input[name="Biden-yourtts"]:checked')?.value,
+            "XTTS": document.querySelector('input[name="Biden-xtts"]:checked')?.value,
+            "Chatterbox": document.querySelector('input[name="Biden-chatter"]:checked')?.value,
+        }
+    },
+    {
+        sentence: "Karlo",
+        ratings: {
+            "YourTTS": document.querySelector('input[name="Karlo-yourtts"]:checked')?.value,
+            "XTTS": document.querySelector('input[name="Karlo-xtts"]:checked')?.value,
+            "Chatterbox": document.querySelector('input[name="Karlo-chatter"]:checked')?.value
+        }
+    },
+    {
+        sentence: "Anna",
+        ratings: {
+            "YourTTS": document.querySelector('input[name="Anna-yourtts"]:checked')?.value,
+            "XTTS": document.querySelector('input[name="Anna-xtts"]:checked')?.value,
+            "Chatterbox": document.querySelector('input[name="Anna-chatter"]:checked')?.value,
+        }
+    },
+    {
+        sentence: "CardiB",
+        ratings: {
+            "YourTTS": document.querySelector('input[name="CardiB-yourtts"]:checked')?.value,
+            "XTTS": document.querySelector('input[name="CardiB-xtts"]:checked')?.value,
+            "Chatterbox": document.querySelector('input[name="CardiB-chatter"]:checked')?.value,
+        }
+    }
+]};
+
+        // Ispis podataka za provjeru
+    console.log(data);
+
+    fetch("https://script.google.com/macros/s/AKfycby8j-BUgD6pCJAuwKG-_Wus__S-sdawE47-pJiIogI4Gf3WIp6R6GFE5k60vS7CIXE/exec", {
+        method: "POST",
+        mode: "no-cors",  // Promijenjeno na 'cors'
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)  // Poslati podatke u JSON formatu
+    })
+    .then(response => response.text())
+    .then(result => console.log("Uspješno poslan odgovor:", result))
+    .catch(error => console.error("Greška:", error));
+
+    const alertBox = document.getElementById("custom-alert");
+    alertBox.style.display = "block";
+    setTimeout(() => alertBox.style.display = "none", 4000);
+
+    // Resetiranje forme
+    document.getElementById("voice-cloning-form").reset();
+});
+</script>
+
+
+</body>
+</html>
